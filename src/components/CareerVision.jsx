@@ -8,9 +8,9 @@ export default function CareerVision() {
           My Career Vision
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           
-          <div className="bg-gradient-to-br from-primary to-secondary text-white p-8 rounded-lg shadow-lg">
+          <div className="bg-gradient-to-br from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold mb-6">Current Goal</h3>
             <p className="text-lg leading-relaxed">
               {portfolioData.careerVision.current}
@@ -22,7 +22,7 @@ export default function CareerVision() {
             <ul className="space-y-4">
               {portfolioData.careerVision.fiveYear.map((goal, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="text-primary font-bold mr-3">•</span>
+                  <span className="text-blue-600 font-bold mr-3">•</span>
                   <span className="text-gray-700">{goal}</span>
                 </li>
               ))}
@@ -34,7 +34,7 @@ export default function CareerVision() {
             <ul className="space-y-4">
               {portfolioData.careerVision.tenYear.map((goal, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="text-primary font-bold mr-3">•</span>
+                  <span className="text-blue-600 font-bold mr-3">•</span>
                   <span className="text-gray-700">{goal}</span>
                 </li>
               ))}
@@ -43,10 +43,10 @@ export default function CareerVision() {
         </div>
 
         <div className="mt-12">
-          <h3 className="text-2xl font-bold mb-8 text-gray-900">My Philosophy</h3>
+          <h3 className="text-2xl font-bold mb-8 text-gray-900 text-center">My Philosophy</h3>
           <div className="grid md:grid-cols-5 gap-4">
             {portfolioData.philosophy.map((item, index) => (
-              <div key={index} className="bg-primary text-white p-6 rounded-lg text-center">
+              <div key={index} className="bg-blue-600 text-white p-6 rounded-lg text-center hover:bg-purple-700 transition-colors">
                 <p className="font-semibold">{item}</p>
               </div>
             ))}

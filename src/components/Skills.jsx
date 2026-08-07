@@ -1,24 +1,33 @@
 import { portfolioData } from '../data/portfolioData';
 
 export default function Skills() {
+  const getSkillWidth = (level) => {
+    switch(level) {
+      case 'Comfortable':
+        return '75%';
+      case 'Intermediate':
+        return '60%';
+      case 'Beginner':
+        return '40%';
+      default:
+        return '90%';
+    }
+  };
+
   const SkillCategory = ({ title, skills }) => (
     <div>
       <h3 className="text-2xl font-bold mb-6 text-gray-900">{title}</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {skills.map((skill, index) => (
-          <div key={index} className="bg-white p-4 rounded-lg shadow-md border-l-4 border-primary">
-            <div className="flex justify-between items-center">
+          <div key={index} className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600">
+            <div className="flex justify-between items-center mb-3">
               <span className="font-semibold text-gray-900">{skill.name}</span>
-              <span className="text-sm text-primary font-semibold">{skill.level}</span>
+              <span className="text-sm text-blue-600 font-semibold bg-blue-100 px-3 py-1 rounded-full">{skill.level}</span>
             </div>
-            <div className="mt-2 bg-gray-200 rounded-full h-2">
+            <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
               <div
-                className="bg-primary rounded-full h-2 transition-all duration-300"
-                style={{
-                  width: skill.level === 'Comfortable' ? '75%' : 
-                         skill.level === 'Intermediate' ? '60%' : 
-                         skill.level === 'Beginner' ? '40%' : '90%'
-                }}
+                className="bg-gradient-to-r from-blue-600 to-purple-700 h-3 rounded-full transition-all duration-500"
+                style={{ width: getSkillWidth(skill.level) }}
               ></div>
             </div>
           </div>
@@ -28,7 +37,7 @@ export default function Skills() {
   );
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+<section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">
           Technical Skills

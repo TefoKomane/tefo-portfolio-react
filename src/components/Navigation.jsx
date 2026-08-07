@@ -3,71 +3,33 @@ import { useState } from 'react';
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' },
-  ];
+  const handleNavClick = (href) => {
+    setIsOpen(false);
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
-    <nav className="fixed w-full bg-white shadow-md z-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
-            <a href="#home" className="text-2xl font-bold text-blue-600">
-              TK
-            </a>
-          </div>
+    <nav style={{ position: 'fixed', width: '100%', top: 0, backgroundColor: 'white', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', zIndex: 50 }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '60px' }}>
+        
+        <a href="#home" onClick={() => handleNavClick('#home')} style={{ fontSize: '24px', fontWeight: 'bold', color: '#2563eb', textDecoration: 'none' }}>
+          TK
+        </a>
 
-          <div className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
-
-          <div className="hidden md:flex space-x-4">
-            <a
-              href="#contact"
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors duration-200"
-            >
-              Get In Touch
-            </a>
-          </div>
-
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
+        <div style={{ display: 'flex', gap: '30px' }}>
+          <a href="#home" onClick={() => handleNavClick('#home')} style={{ color: '#374151', textDecoration: 'none', fontWeight: '500' }}>Home</a>
+          <a href="#about" onClick={() => handleNavClick('#about')} style={{ color: '#374151', textDecoration: 'none', fontWeight: '500' }}>About</a>
+          <a href="#projects" onClick={() => handleNavClick('#projects')} style={{ color: '#374151', textDecoration: 'none', fontWeight: '500' }}>Projects</a>
+          <a href="#skills" onClick={() => handleNavClick('#skills')} style={{ color: '#374151', textDecoration: 'none', fontWeight: '500' }}>Skills</a>
+          <a href="#contact" onClick={() => handleNavClick('#contact')} style={{ color: '#374151', textDecoration: 'none', fontWeight: '500' }}>Contact</a>
         </div>
 
-        {isOpen && (
-          <div className="md:hidden pb-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="block text-gray-700 hover:text-blue-600 py-2"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
-        )}
+        <a href="#contact" onClick={() => handleNavClick('#contact')} style={{ backgroundColor: '#2563eb', color: 'white', padding: '8px 24px', borderRadius: '8px', textDecoration: 'none', fontWeight: '500' }}>
+          Get In Touch
+        </a>
       </div>
     </nav>
   );
