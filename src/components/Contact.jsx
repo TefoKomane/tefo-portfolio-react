@@ -17,9 +17,9 @@ export default function Contact() {
             href={`mailto:${portfolioData.email}`}
             className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center"
           >
-            <div className="text-4xl mb-4">✉️</div>
+            <img src="/gmail-icon.png" alt="Email" style={{ width: '48px', height: '48px', margin: '0 auto 16px' }} />
             <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
-            <p className="text-primary font-semibold">{portfolioData.email}</p>
+            <p className="text-blue-600 font-semibold">{portfolioData.email}</p>
           </a>
 
           <a
@@ -28,9 +28,9 @@ export default function Contact() {
             rel="noopener noreferrer"
             className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center"
           >
-            <div className="text-4xl mb-4">🐙</div>
+            <img src="/github-icon.png" alt="GitHub" style={{ width: '48px', height: '48px', margin: '0 auto 16px' }} />
             <h3 className="text-xl font-bold text-gray-900 mb-2">GitHub</h3>
-            <p className="text-primary font-semibold">View My Code</p>
+            <p className="text-blue-600 font-semibold">View My Code</p>
           </a>
 
           <a
@@ -39,9 +39,9 @@ export default function Contact() {
             rel="noopener noreferrer"
             className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center"
           >
-            <div className="text-4xl mb-4">💼</div>
+            <img src="/linkedin-icon.png" alt="LinkedIn" style={{ width: '48px', height: '48px', margin: '0 auto 16px' }} />
             <h3 className="text-xl font-bold text-gray-900 mb-2">LinkedIn</h3>
-            <p className="text-primary font-semibold">Connect With Me</p>
+            <p className="text-blue-600 font-semibold">Connect With Me</p>
           </a>
         </div>
 
@@ -55,7 +55,7 @@ export default function Contact() {
               <label className="block text-gray-700 font-semibold mb-2">Name</label>
               <input
                 type="text"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
                 placeholder="Your name"
               />
             </div>
@@ -64,7 +64,7 @@ export default function Contact() {
               <label className="block text-gray-700 font-semibold mb-2">Email</label>
               <input
                 type="email"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
                 placeholder="Your email"
               />
             </div>
@@ -73,14 +73,14 @@ export default function Contact() {
               <label className="block text-gray-700 font-semibold mb-2">Message</label>
               <textarea
                 rows="5"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
                 placeholder="Your message"
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-secondary transition-colors"
+              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               Send Message
             </button>

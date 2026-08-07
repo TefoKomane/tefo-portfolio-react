@@ -3,9 +3,10 @@ export const portfolioData = {
   title: "Full Stack Software Developer",
   subtitle: "Building Software That Solves Real Problems Through Purpose, People and Technology",
   location: "South Africa",
-  email: "tefokomane@email.com",
-  github: "https://github.com/TefoKomane",
-  linkedin: "https://linkedin.com/in/tefo-komane",
+email: "karabokomane29@gmail.com",
+github: "https://github.com/TefoKomane",
+linkedin: "https://www.linkedin.com/in/tefo-karabo-komane",
+
   
   hero: {
     headline: "Full Stack Software Developer",

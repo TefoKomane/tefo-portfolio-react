@@ -15,8 +15,8 @@ export default function Navigation() {
     <nav style={{ position: 'fixed', width: '100%', top: 0, backgroundColor: 'white', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', zIndex: 50 }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '60px' }}>
         
-        <a href="#home" onClick={() => handleNavClick('#home')} style={{ fontSize: '24px', fontWeight: 'bold', color: '#2563eb', textDecoration: 'none' }}>
-          TK
+        <a href="#home" onClick={() => handleNavClick('#home')} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+          <img src="/TK-favicon.png" alt="Tefo Komane" style={{ height: '40px', width: '40px' }} />
         </a>
 
         <div style={{ display: 'flex', gap: '30px' }}>
