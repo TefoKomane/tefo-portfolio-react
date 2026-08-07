@@ -1,12 +1,25 @@
-import './App.jsx'
+import Navigation from './components/Navigation';
+import Hero from './components/Hero';
+import About from './components/About';
+import CareerVision from './components/CareerVision';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="min-h-screen bg-white">
-      <h1 className="text-4xl font-bold text-center pt-20">Tefo Karabo Komane</h1>
-      <p className="text-center text-gray-600 mt-4">Full Stack Software Developer</p>
+      <Navigation />
+      <Hero />
+      <About />
+      <CareerVision />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
