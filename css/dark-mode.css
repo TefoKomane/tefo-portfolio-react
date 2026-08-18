@@ -1,0 +1,220 @@
+/* ========================================
+   DARK MODE SUPPORT (BONUS FEATURE)
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dark-color: #f8f9fa;
+    --light-color: #212529;
+    --text-color: #e9ecef;
+  }
+
+  body {
+    background-color: #212529;
+    color: #e9ecef;
+  }
+
+  /* Navbar Dark Mode */
+  .navbar {
+    background-color: #2d3436 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar-brand {
+    color: #f8f9fa !important;
+  }
+
+  .navbar-brand:hover {
+    color: #0d6efd !important;
+  }
+
+  .nav-link {
+    color: #c5cae9 !important;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: #0d6efd !important;
+  }
+
+  /* Cards Dark Mode */
+  .card {
+    background-color: #2d3436;
+    border-color: #3d4a52;
+    color: #e9ecef;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+  }
+
+  .card:hover {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5) !important;
+  }
+
+  /* Section Titles */
+  .section-title {
+    color: #f8f9fa;
+  }
+
+  /* Text Colors */
+  .text-muted {
+    color: #adb5bd !important;
+  }
+
+  .text-dark {
+    color: #e9ecef !important;
+  }
+
+  /* Form Elements */
+  .form-control {
+    background-color: #2d3436;
+    border-color: #3d4a52;
+    color: #e9ecef;
+  }
+
+  .form-control::placeholder {
+    color: #6c757d;
+    opacity: 0.7;
+  }
+
+  .form-control:focus {
+    background-color: #2d3436;
+    border-color: #0d6efd;
+    color: #e9ecef;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  }
+
+  .form-label {
+    color: #e9ecef;
+  }
+
+  /* Highlight Labels */
+  .highlight-label {
+    background-color: #3d4a52;
+    border-left-color: #0d6efd;
+    color: #e9ecef;
+  }
+
+  .highlight-label h4 {
+    color: #0d6efd;
+  }
+
+  /* Badges */
+  .badge {
+    background-color: #3d4a52 !important;
+    color: #e9ecef !important;
+    border-color: #0d6efd !important;
+  }
+
+  /* Social Icons */
+  .social-icon {
+    background-color: #3d4a52;
+    color: #0d6efd;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+  }
+
+  .social-icon:hover {
+    background-color: #0d6efd;
+    color: white;
+    box-shadow: 0 1rem 2rem rgba(13, 110, 253, 0.4);
+  }
+
+  /* Buttons */
+  .btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+  }
+
+  .btn-primary:hover {
+    background-color: #0a58ca;
+    border-color: #0a58ca;
+  }
+
+  .btn-outline-primary {
+    color: #0d6efd;
+    border-color: #0d6efd;
+  }
+
+  .btn-outline-primary:hover {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: white;
+  }
+
+  .btn-light {
+    background-color: #e9ecef;
+    color: #212529;
+  }
+
+  .btn-light:hover {
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+
+  .btn-outline-light {
+    color: #f8f9fa;
+    border-color: #f8f9fa;
+  }
+
+  .btn-outline-light:hover {
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    color: #212529;
+  }
+
+  /* Background Colors */
+  #about {
+    background-color: #2d3436;
+  }
+
+  #projects {
+    background-color: #212529;
+  }
+
+  #contact {
+    background-color: #2d3436;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #121212 !important;
+    border-top-color: #0d6efd;
+  }
+
+  footer p {
+    color: #adb5bd;
+  }
+
+  footer a {
+    color: #0d6efd;
+  }
+
+  footer a:hover {
+    color: #e9ecef;
+  }
+
+  /* Project Cards */
+  .project-card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+  }
+
+  .project-card:hover {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5) !important;
+  }
+
+  /* Contact Section */
+  #contact .card {
+    background-color: #2d3436;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+  }
+
+  /* Smooth Transitions */
+  * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+}
+
+/* Dark Mode Detection */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
