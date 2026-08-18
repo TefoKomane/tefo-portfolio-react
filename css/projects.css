@@ -1,0 +1,134 @@
+/* ========================================
+   PROJECTS SECTION STYLES
+   ======================================== */
+
+#projects {
+  background-color: #ffffff;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #212529;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+#projects > .container > p.text-muted {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Project Card Styling */
+.project-card {
+  border: none;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2) !important;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
+
+/* Project Image */
+.project-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Project Card Body */
+.project-card .card-title {
+  color: #212529;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.project-card .card-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.project-card .text-muted.small {
+  font-size: 0.85rem;
+  color: #6c757d !important;
+}
+
+/* Project Buttons */
+.project-card .btn {
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+}
+
+.project-card .btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: white;
+}
+
+.project-card .btn-primary:hover {
+  background-color: #0a58ca;
+  border-color: #0a58ca;
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(13, 110, 253, 0.3);
+}
+
+.project-card .btn-outline-primary {
+  color: #0d6efd;
+  border-color: #0d6efd;
+  padding: 0.4rem 0.8rem;
+}
+
+.project-card .btn-outline-primary:hover {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: white;
+}
+
+.project-card .btn-outline-primary i {
+  font-size: 1.1rem;
+}
+
+/* Grid Layout */
+.row.g-4 {
+  row-gap: 2rem;
+}
+
+/* Responsive Projects */
+@media (max-width: 767px) {
+  #projects {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .project-img {
+    height: 200px;
+  }
+
+  .project-card .card-title {
+    font-size: 1.1rem;
+  }
+
+  .project-card .btn-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
