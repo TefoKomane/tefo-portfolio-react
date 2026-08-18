@@ -1,0 +1,186 @@
+/* ========================================
+   RESPONSIVE DESIGN STYLES
+   ======================================== */
+
+/* Base Mobile Styles */
+@media (max-width: 576px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container,
+  .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  h1, .h1 {
+    font-size: 1.75rem;
+  }
+
+  h2, .h2 {
+    font-size: 1.5rem;
+  }
+
+  h3, .h3 {
+    font-size: 1.25rem;
+  }
+
+  /* Navbar adjustments */
+  .navbar {
+    padding: 0.5rem 0;
+  }
+
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0 !important;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .nav-link.active {
+    border-left: 3px solid #0d6efd;
+    padding-left: 1rem !important;
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    padding-top: 1rem;
+  }
+
+  /* Button sizes */
+  .btn-lg {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet Styles (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  .card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Medium Devices (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .grid.g-4 > * {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+
+  .project-card {
+    height: 100%;
+  }
+}
+
+/* Large Screens (992px+) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .grid.g-4 > * {
+    flex: 0 0 calc(33.333% - 1rem);
+  }
+}
+
+/* Extra Large Screens (1200px+) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* 4K Displays (1400px+) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  h1, .h1 {
+    font-size: 3.5rem;
+  }
+
+  h2, .h2 {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+/* Landscape Mode */
+@media (max-height: 600px) {
+  .hero-section {
+    min-height: 400px;
+    height: auto;
+    padding: 4rem 0;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .navbar,
+  .hero-section,
+  .social-icons,
+  footer {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  #about,
+  #contact {
+    page-break-inside: avoid;
+  }
+
+  .card {
+    box-shadow: none;
+    border: 1px solid #dee2e6;
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8rem;
+  }
+
+  .section-title {
+    page-break-after: avoid;
+  }
+
+  .project-card {
+    page-break-inside: avoid;
+  }
+}
