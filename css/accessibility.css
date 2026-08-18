@@ -1,0 +1,174 @@
+/* ========================================
+   ACCESSIBILITY STYLES
+   ======================================== */
+
+/* Skip to Content Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus Styles */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+/* Enhanced Focus States */
+.btn:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+}
+
+.nav-link:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+/* Form Accessibility */
+.form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #212529;
+}
+
+.form-control:invalid {
+  border-color: #dc3545;
+  background-image: none;
+}
+
+.form-control:valid {
+  border-color: #198754;
+}
+
+/* ARIA Live Regions */
+[role="status"],
+[role="alert"],
+[aria-live] {
+  visibility: visible;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-content {
+    animation: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: more) {
+  :root {
+    --primary-color: #0a3a9a;
+    --dark-color: #000000;
+    --light-color: #ffffff;
+  }
+
+  body {
+    color: #000000;
+  }
+
+  .card {
+    border: 2px solid #000000;
+  }
+
+  .btn {
+    border-width: 2px;
+  }
+}
+
+/* Color Contrast Checker */
+.text-light {
+  color: #ffffff !important;
+}
+
+.text-dark {
+  color: #212529 !important;
+}
+
+.bg-dark {
+  background-color: #212529 !important;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+/* Button Focus Indicator */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+/* Link Underlines */
+a {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  text-decoration-thickness: 3px;
+}
+
+/* Heading Hierarchy */
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
