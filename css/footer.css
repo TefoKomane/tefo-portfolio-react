@@ -1,0 +1,45 @@
+/* ========================================
+   FOOTER STYLES
+   ======================================== */
+
+footer {
+  background-color: #212529 !important;
+  border-top: 4px solid #0d6efd;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+footer p strong {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+footer a {
+  color: #0d6efd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #e9ecef;
+  text-decoration: underline;
+}
+
+/* Responsive Footer */
+@media (max-width: 767px) {
+  footer {
+    padding: 1.5rem 0;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
