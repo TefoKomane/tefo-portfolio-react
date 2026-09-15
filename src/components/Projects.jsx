@@ -14,8 +14,22 @@ export default function Projects() {
         <div className="space-y-12">
           {portfolioData.projects.map((project) => (
             <div key={project.id} className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+
+              {/* Screenshot preview — shown when the project has an image */}
+              {project.image && (
+                <div className="w-full overflow-hidden bg-gray-200 border-b border-gray-200" style={{ maxHeight: '340px' }}>
+                  <img
+                    src={project.image}
+                    alt={`${project.title} screenshot`}
+                    className="w-full object-cover object-top"
+                    style={{ maxHeight: '340px' }}
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
+                </div>
+              )}
+
               <div className="grid md:grid-cols-2 gap-8 p-8">
-                
+
                 <div>
                   <h3 className="text-3xl font-bold mb-4 text-gray-900">
                     {project.title}
@@ -35,22 +49,54 @@ export default function Projects() {
                     <h4 className="text-lg font-semibold text-blue-600 mb-2">Technologies</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, index) => (
-                        <span key={index} style={{ backgroundColor: '#f3f4f6', color: '#000000', padding: '6px 12px', borderRadius: '20px', fontSize: '14px', fontWeight: '500' }}>
+                        <span
+                          key={index}
+                          style={{
+                            backgroundColor: '#f3f4f6',
+                            color: '#000000',
+                            padding: '6px 12px',
+                            borderRadius: '20px',
+                            fontSize: '14px',
+                            fontWeight: '500',
+                          }}
+                        >
                           {tech}
                         </span>
                       ))}
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <a
-                      href={project.liveDemo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center"
-                    >
-                      View Live Demo
-                    </a>
+                  {/* Primary CTA buttons */}
+                  <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
+                    {project.liveDemo && project.liveDemo !== 'Coming Soon' && (
+                      <a
+                        href={project.liveDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center"
+                      >
+                        {project.liveHost ? 'Client Demo' : 'View Live Demo'}
+                      </a>
+                    )}
+
+                    {/* Host portal link — only present on projects like Airbnb */}
+                    {project.liveHost && (
+                      <a
+                        href={project.liveHost}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-rose-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-rose-600 transition-colors text-center"
+                      >
+                        Host Portal
+                      </a>
+                    )}
+
+                    {project.liveDemo === 'Coming Soon' && (
+                      <span className="bg-gray-300 text-gray-600 px-6 py-3 rounded-lg font-semibold text-center cursor-not-allowed">
+                        Coming Soon
+                      </span>
+                    )}
+
                     <a
                       href={project.github}
                       target="_blank"
@@ -92,6 +138,7 @@ export default function Projects() {
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
           ))}
