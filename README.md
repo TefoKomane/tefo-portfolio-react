@@ -19,6 +19,7 @@ This is my professional portfolio — a single-page React application that docum
 |---|---|---|
 | Airbnb Clone | React, Node.js, Express, MongoDB, JWT | [Client](https://airbnb-clone-omega-wine.vercel.app) · [Host Portal](https://airbnb-clone-qw8t.vercel.app) |
 | Movie Mood | React, TMDb API, Tailwind CSS | [Live](https://tefo-movie-mood.netlify.app) |
+| Urban Threads | React, Local Storage, CSS | [Live](https://tefo-urban-threads-online-store.netlify.app) |
 | Google Keep Clone | React, Local Storage, Tailwind CSS | [Live](https://tefo-google-keep-react.netlify.app) |
 | Good Shepherd Tsotellang | React, TypeScript, Custom CSS | [Live](https://good-shepherd-tsotellang.vercel.app) |
 
